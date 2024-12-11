@@ -1,0 +1,3 @@
+[submodule "Vyxal"]
+	path = Vyxal
+	url = https://github.com/Vyxal/Vyxal
