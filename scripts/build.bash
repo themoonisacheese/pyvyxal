@@ -1,7 +1,18 @@
 #!/bin/env bash
 
-echo "fetch vyxal 3"
-git clone -b version-3 https://github.com/Vyxal/Vyxal.git || exit 1
+echo "Fetch vyxal 3"
+
+
+if [ -d "Vyxal" ]; then
+    # shellcheck disable=SC2164
+    pushd Vyxal
+    git fetch --all || popd && exit 1
+    git reset --hard origin/version-3
+    # shellcheck disable=SC2164
+    popd
+else
+    git clone -b version-3 https://github.com/Vyxal/Vyxal.git || exit 1
+fi
 
 
 echo "Build vyxal3 js"
