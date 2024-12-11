@@ -1,0 +1,14 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "pyvyxal"
+version = "0"
+description = "Vyxal3.js python thin wrapper"
+authors = ["Eli Senn <me@poggers.website>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pythonmonkey="^1.1.0"
